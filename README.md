@@ -1,5 +1,5 @@
 # End-to-End-Sign-Language-AI-Translation-System
-Computer Vision 
+Computer Vision, Edge Computing, Cloud Computing, Blockchain 
 
 # Towards Trustworthy Sign Language Translation  
 ### A Privacy-Preserving Edge–Cloud–Blockchain System
@@ -104,7 +104,7 @@ Dataset characteristics, preprocessing pipelines, and splits are fully described
 
 This design improves **privacy**, **efficiency**, and **robustness** compared to raw RGB-based approaches.
 
-Demo & Code
+** Demo & Code **
 
 Sign Language Machine Translation Edge/Cloud Demo with Transformer baseline
 
