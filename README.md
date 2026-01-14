@@ -1,8 +1,7 @@
 # End-to-End-Sign-Language-AI-Translation-System
-Computer Vision 
+Computer Vision, Edge Computing, Cloud Computing, Blockchain 
 
-# Towards Trustworthy Sign Language Translation  
-### A Privacy-Preserving Edge–Cloud–Blockchain System
+# Towards Trustworthy Sign Language Translation: A Privacy-Preserving Edge–Cloud–Blockchain System
 
 This repository accompanies the paper:
 
@@ -10,9 +9,9 @@ This repository accompanies the paper:
 > *Towards Trustworthy Sign Language Translation System:  
 > A Privacy-Preserving Edge–Cloud–Blockchain Approach*  
 > **Mathematics**, 2025, 13, 3759.  
-> DOI: 10.3390/math13233759 :contentReference[oaicite:0]{index=0}
+> DOI: 10.3390/math13233759
 
-📬 Contact
+## 📬 Contact
 
 Prof. Leila Ismail
 Intelligent Distributed Computing and Systems (INDUCE) Lab
@@ -20,7 +19,7 @@ College of Information Technology, United Arab Emirates University
 leila@uaeu.ac.ae
 
 
-📜 Citation
+## 📜 Citation
 
 If you use this work, please cite:
 hahin, Nada, and Leila Ismail. 2025. "Towards Trustworthy Sign Language Translation System: A Privacy-Preserving Edge–Cloud–Blockchain Approach" Mathematics 13, no. 23: 3759. https://doi.org/10.3390/math13233759
@@ -106,7 +105,7 @@ Captures sign videos via camera input for keypoint extraction and processing.
 - Medical and healthcare conversations
 - Designed to reflect real-world assistive scenarios
 
-Dataset characteristics, preprocessing pipelines, and splits are fully described in the paper :contentReference[oaicite:1]{index=1}.
+Dataset characteristics, preprocessing pipelines, and splits are fully described in the paper.
 
 ## ⚙️ Preprocessing Pipeline
 
@@ -118,7 +117,7 @@ Dataset characteristics, preprocessing pipelines, and splits are fully described
 
 This design improves **privacy**, **efficiency**, and **robustness** compared to raw RGB-based approaches.
 
-Demo & Code
+## Demo & Code
 
 Sign Language Machine Translation Edge/Cloud Demo with Transformer baseline
 
@@ -126,13 +125,13 @@ End-to-end edge-cloud pipeline for sign language translation including keypoint 
 
 Experimental Setup:
 
-Requirements
+### Requirements
 ------------
 * Python � 3.10
 * Edge: opencv-python, mediapipe, numpy, torch, requests, sentencepiece
 * Cloud: flask, numpy
 
-Quick start
+### Quick start
 -----------
 1) Prepare the cloud service
 	1. Install the files under the model directory
@@ -165,7 +164,7 @@ Quick start
 		* Press u to force an upload + model fetch cycle.
 		* Press q to quit.
 
-Data flow
+### Data flow
 ---------
 1. Edge calls /get_model, /get_specials, /get_spm to refresh assets (periodically).
 2. Camera captures frames and the edge extracts keypoints using MediaPipe and concatenates keypoints producing a vector of 1662 floats per frame.
@@ -175,13 +174,13 @@ Data flow
 6. Inference is run through the model to produce translations.
 7. When the local cache reaches MAX_SAMPLES, the edge packs all windows into samples.npz and transmits them them to the cloud, along with the translations.
 
-Configuration notes
+### Configuration notes
 -------------------
 * Confidence gate: CONF_THRESH on edge controls when a translation becomes the displayed caption.
 * Warm-up: MIN_WINDOWS_BEFORE_DISPLAY skips the first windows for stabilization before translating sign language to text.
 * Local inference: toggle with RUN_LOCAL_INFERENCE on edge. If enabled, the edge loads MODEL_PATH and detokenizes with medasl_bpe.model + special_ids.json.
 
-Deployment
+### Deployment
 ----------
 * Set the edge CLOUD_* URLs to the cloud host/IP and open the cloud port in the firewall.
 * Run edge from the repo root:
@@ -189,6 +188,6 @@ python -m edge
 * Run cloud similarly:
 python -m cloud
 
-📄 License
+### 📄 License
 
 This project is released under the Creative Commons Attribution (CC BY 4.0) License, consistent with the published article.
