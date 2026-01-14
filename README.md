@@ -48,6 +48,8 @@ System Architecture:
 
 Our proposed end-to-end edge-cloud-blockchain system for SLMT is presented in Figure 1. It consists of the following modules:
 
+<img width="1440" height="1040" alt="End-to-End Model" src="https://github.com/user-attachments/assets/e80b6fc9-0473-42f7-8301-0b27beb889e7" />
+
 1. **Sign Language Recognition Module**
 
 Captures sign videos via camera input for keypoint extraction and processing.
