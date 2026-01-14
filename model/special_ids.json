@@ -1,0 +1,11 @@
+{
+  "TEXT_PAD_ID": 920,
+  "TEXT_SOS_ID": 1,
+  "TEXT_EOS_ID": 2,
+  "TEXT_UNK_ID": 0,
+  "TEXT_VOCAB_SIZE": 921,
+  "GLOSS_PAD_ID": 0,
+  "GLOSS_SOS_ID": 1,
+  "GLOSS_EOS_ID": 2,
+  "GLOSS_BLANK_ID": 3
+}
