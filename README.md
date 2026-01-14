@@ -1,11 +1,116 @@
 # End-to-End-Sign-Language-AI-Translation-System
 Computer Vision 
 
+# Towards Trustworthy Sign Language Translation  
+### A Privacy-Preserving Edge–Cloud–Blockchain System
 
-Sign Language Machine Translation Edge�Cloud Demo with Transformer baseline
+This repository accompanies the paper:
+
+> **Nada Shahin, Leila Ismail**  
+> *Towards Trustworthy Sign Language Translation System:  
+> A Privacy-Preserving Edge–Cloud–Blockchain Approach*  
+> **Mathematics**, 2025, 13, 3759.  
+> DOI: 10.3390/math13233759 :contentReference[oaicite:0]{index=0}
+
+📬 Contact
+
+Prof. Leila Ismail
+Intelligent Distributed Computing and Systems (INDUCE) Lab
+College of Information Technology, United Arab Emirates University
+leila@uaeu.ac.ae
+
+
+📜 Citation
+
+If you use this work, please cite:
+hahin, Nada, and Leila Ismail. 2025. "Towards Trustworthy Sign Language Translation System: A Privacy-Preserving Edge–Cloud–Blockchain Approach" Mathematics 13, no. 23: 3759. https://doi.org/10.3390/math13233759
+
+Overview:
+
+This work envisions a new generation of trustworthy sign language translation systems that go beyond translation accuracy to address privacy, accountability, and real-world deployment. In response to the global shortage of certified sign language interpreters and the growing need for inclusive assistive technologies, the paper introduces a privacy-preserving, consent-aware SLMT architecture built on the integration of edge computing, cloud intelligence, and blockchain governance. By operating on abstract keypoint representations rather than raw video and enforcing explicit, auditable user consent, the system enables real-time communication while safeguarding user rights and regulatory compliance 
+
+At its core, the proposed system demonstrates that responsible AI and high performance are not competing goals. Through a comparative evaluation of Transformer-based models on large-scale and medical-domain datasets, the study shows that lightweight adaptive architectures can deliver accurate translations with substantially lower latency and computational cost in distributed environments. By embedding consent management and auditability directly into the AI pipeline, this work establishes a blueprint for ethically grounded, scalable assistive AI, with relevance extending beyond sign language translation to privacy-sensitive applications in healthcare and other biometric domains.
+
+System Architecture:
+
+Our proposed end-to-end edge-cloud-blockchain system for SLMT is presented in Figure 1. It consists of the following modules:
+
+1. **Sign Language Recognition Module**
+
+Captures sign videos via camera input for keypoint extraction and processing.
+
+2. **AI-Enabled Translation Application**  
+   Acts as a gateway for user interaction and consent management.
+
+3. **Edge Computing Layer**  
+   - Keypoint extraction (MediaPipe)
+   - Preprocessing and real-time inference
+   - Reduced latency and improved privacy
+
+4. **Cloud Computing Layer**  
+   - Model training and retraining
+   - Dataset storage (with consent)
+   - Deployment of updated models
+
+5. **Blockchain Layer**  
+   - Immutable logging of:
+     - User consent receipts
+     - Policy versions
+     - System certificates
+     - Audit trails
+   
+   It ensures transparency, integrity, and regulatory compliance.
+
+
+## 🤖 Models Implemented
+
+### 1. Encoder–Decoder Transformer
+- Baseline and widely adopted architecture for SLMT
+- Captures long-range spatiotemporal dependencies
+- Higher computational cost due to quadratic self-attention
+
+### 2. Adaptive Transformer (ADAT)
+- Lightweight and efficient variant
+- Key features:
+  - LogSparse Self-Attention (O(n log n))
+  - Adaptive gating for short- and long-range dependencies
+- Demonstrates:
+  - Faster convergence
+  - Reduced model size
+  - Lower inference and communication latency
+
+
+## 📊 Datasets
+
+### 🔹 RWTH-PHOENIX-Weather-2014T (PHOENIX14T)
+- German Sign Language (DGS)
+- Weather domain
+- Large-scale, multi-signer benchmark dataset
+
+### 🔹 MedASL (New Dataset)
+- American Sign Language (ASL)
+- Medical and healthcare conversations
+- Designed to reflect real-world assistive scenarios
+
+Dataset characteristics, preprocessing pipelines, and splits are fully described in the paper :contentReference[oaicite:1]{index=1}.
+
+## ⚙️ Preprocessing Pipeline
+
+- Keypoint extraction using **MediaPipe**
+  - Hands, face, pose, and iris landmarks
+- Normalization, rescaling, and padding
+- Sliding-window segmentation for inference
+- Tokenization and subword modeling for text output
+
+This design improves **privacy**, **efficiency**, and **robustness** compared to raw RGB-based approaches.
+
+Demo & Code
+
+Sign Language Machine Translation Edge/Cloud Demo with Transformer baseline
 
 End-to-end edge-cloud pipeline for sign language translation including keypoint capture via camera and model inference on edge + communication with cloud.
 
+Experimental Setup:
 
 Requirements
 ------------
@@ -69,3 +174,7 @@ Deployment
 python -m edge
 * Run cloud similarly:
 python -m cloud
+
+📄 License
+
+This project is released under the Creative Commons Attribution (CC BY 4.0) License, consistent with the published article.
