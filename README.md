@@ -31,6 +31,20 @@ This work envisions a new generation of trustworthy sign language translation sy
 
 At its core, the proposed system demonstrates that responsible AI and high performance are not competing goals. Through a comparative evaluation of Transformer-based models on large-scale and medical-domain datasets, the study shows that lightweight adaptive architectures can deliver accurate translations with substantially lower latency and computational cost in distributed environments. By embedding consent management and auditability directly into the AI pipeline, this work establishes a blueprint for ethically grounded, scalable assistive AI, with relevance extending beyond sign language translation to privacy-sensitive applications in healthcare and other biometric domains.
 
+## ✨ Key Contributions
+
+- 🔹 **End-to-end edge–cloud–blockchain architecture** for trustworthy SLMT  
+- 🔹 **Consent-aware design** supporting both application-level and system-level privacy  
+- 🔹 **Comparative evaluation** of:
+  - Encoder–Decoder Transformer  
+  - Adaptive Transformer (ADAT)  
+- 🔹 **New medical-domain dataset (MedASL)** for sign-to-text translation  
+- 🔹 **Comprehensive runtime analysis**, including:
+  - Training time  
+  - Inference latency  
+  - Edge–cloud communication  
+  - End-to-end system delay  
+
 System Architecture:
 
 Our proposed end-to-end edge-cloud-blockchain system for SLMT is presented in Figure 1. It consists of the following modules:
