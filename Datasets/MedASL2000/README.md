@@ -12,7 +12,7 @@ The Videos subfolder contains subfolders, each representing a single sentence in
 If you use this dataset, please cite:
 Shahin, Nada, and Leila Ismail. 2025. "Towards Trustworthy Sign Language Translation System: A Privacy-Preserving Edge–Cloud–Blockchain Approach" Mathematics 13, no. 23: 3759. https://doi.org/10.3390/math13233759
 
-## Prompt Engineering Design:
+## Prompt Engineering Design
 
 To create MedASL, we design and develop prompts using the following methodology:<br><br>
 • High-Level Prompt Structure<br>
@@ -23,12 +23,12 @@ We refine the high-level prompt by dividing it into low-level prompts. This is t
 “Generate 10 medical-related statements that a nurse might say when checking a patient’s vitals.”
 
 
-## Data Recording Process:
+## Data Recording Process
 
 We recorded the sign videos using Intel RealSense at a resolution of 1280×800 and stored them in “.npy” format. 
 
 
-## Data Pre-processing:
+## Data Pre-processing
 
 For the sign language gloss and spoken language text, we applied the following additional pre-processing steps:<br><br>
 • Building Vocabularies: We create unique vocabularies for gloss and text data, including a special token <UNK> to represent unknown words.<br>
