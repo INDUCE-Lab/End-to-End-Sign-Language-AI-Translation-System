@@ -22,11 +22,11 @@ leila@uaeu.ac.ae
 ## 📜 Citation
 
 If you use this work, please cite:
-hahin, Nada, and Leila Ismail. 2025. "Towards Trustworthy Sign Language Translation System: A Privacy-Preserving Edge–Cloud–Blockchain Approach" Mathematics 13, no. 23: 3759. https://doi.org/10.3390/math13233759
+Shahin, Nada, and Leila Ismail. 2025. "Towards Trustworthy Sign Language Translation System: A Privacy-Preserving Edge–Cloud–Blockchain Approach" Mathematics 13, no. 23: 3759. https://doi.org/10.3390/math13233759
 
 Overview:
 
-This work envisions a new generation of trustworthy sign language translation systems that go beyond translation accuracy to address privacy, accountability, and real-world deployment. In response to the global shortage of certified sign language interpreters and the growing need for inclusive assistive technologies, the paper introduces a privacy-preserving, consent-aware SLMT architecture built on the integration of edge computing, cloud intelligence, and blockchain governance. By operating on abstract keypoint representations rather than raw video and enforcing explicit, auditable user consent, the system enables real-time communication while safeguarding user rights and regulatory compliance 
+This work envisions a new generation of trustworthy sign language translation systems that go beyond translation accuracy to address privacy, accountability, and real-world deployment. In response to the global shortage of certified sign language interpreters and the growing need for inclusive assistive technologies, the paper introduces a privacy-preserving, consent-aware SLMT architecture that integrates edge computing, cloud intelligence, and blockchain governance. By operating on abstract keypoint representations rather than raw video and enforcing explicit, auditable user consent, the system enables real-time communication while safeguarding user rights and regulatory compliance 
 
 At its core, the proposed system demonstrates that responsible AI and high performance are not competing goals. Through a comparative evaluation of Transformer-based models on large-scale and medical-domain datasets, the study shows that lightweight adaptive architectures can deliver accurate translations with substantially lower latency and computational cost in distributed environments. By embedding consent management and auditability directly into the AI pipeline, this work establishes a blueprint for ethically grounded, scalable assistive AI, with relevance extending beyond sign language translation to privacy-sensitive applications in healthcare and other biometric domains.
 
@@ -123,13 +123,13 @@ This design improves **privacy**, **efficiency**, and **robustness** compared to
 
 Sign Language Machine Translation Edge/Cloud Demo with Transformer baseline
 
-End-to-end edge-cloud pipeline for sign language translation including keypoint capture via camera and model inference on edge + communication with cloud.
+End-to-end edge-cloud pipeline for sign language translation, including keypoint capture via camera and model inference on edge + communication with cloud.
 
 Experimental Setup:
 
 ### Requirements
 ------------
-* Python � 3.10
+* Python 3.10
 * Edge: opencv-python, mediapipe, numpy, torch, requests, sentencepiece
 * Cloud: flask, numpy
 
@@ -162,19 +162,19 @@ Experimental Setup:
 		python edge.py
 
 	3. Controls:
-		* When running the edge python script, a window will pop up showing landmarks and a caption (�translating�� appears until translation confidence/threshold is met).
+		* When running the edge Python script, a window will pop up showing landmarks and a caption ("translating.." appears until translation confidence/threshold is met).
 		* Press u to force an upload + model fetch cycle.
 		* Press q to quit.
 
 ### Data flow
 ---------
 1. Edge calls /get_model, /get_specials, /get_spm to refresh assets (periodically).
-2. Camera captures frames and the edge extracts keypoints using MediaPipe and concatenates keypoints producing a vector of 1662 floats per frame.
+2. Camera captures frames, and the edge extracts keypoints using MediaPipe and concatenates keypoints, producing a vector of 1662 floats per frame.
 3. Sliding window of length SEQ_LEN forms an array [SEQ_LEN, 1662].
-4. When sliding window is full, the window is saved locally (.npy).
+4. When the sliding window is full, the window is saved locally (.npy).
 5. The edge preprocesses the npy file.
 6. Inference is run through the model to produce translations.
-7. When the local cache reaches MAX_SAMPLES, the edge packs all windows into samples.npz and transmits them them to the cloud, along with the translations.
+7. When the local cache reaches MAX_SAMPLES, the edge packs all windows into samples.npz and transmits them to the cloud, along with the translations.
 
 ### Configuration notes
 -------------------
