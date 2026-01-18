@@ -1,7 +1,7 @@
 '''
 Title:        End-to-End-Sign-Language-AI-Translation-System
 Description:  End-to-end system for sign language translation using AI models across Edge and Cloud.
-Licence:      Creative Commons Attribution (CC BY 4.0) License
+Licence:      GNU GENERAL PUBLIC LICENSE
 
 If you are using any ideas, algorithms, packages, codes, datasets, workload, results, and plots included in this project, please cite
 the following paper:
