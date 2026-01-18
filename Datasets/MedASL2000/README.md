@@ -7,6 +7,10 @@ The Annotations subfolder includes a CSV file listing 2000 medical-related sente
 
 The Videos subfolder contains subfolders, each representing a single sentence in the dataset. Each sentence is signed in ASL, and the corresponding video is stored as .npy files, where each .npy file represents one second of the signed video.
 
+## 📜 Citation
+
+If you use this dataset, please cite:
+Shahin, Nada, and Leila Ismail. 2025. "Towards Trustworthy Sign Language Translation System: A Privacy-Preserving Edge–Cloud–Blockchain Approach" Mathematics 13, no. 23: 3759. https://doi.org/10.3390/math13233759
 
 ## Prompt Engineering Design:
 
