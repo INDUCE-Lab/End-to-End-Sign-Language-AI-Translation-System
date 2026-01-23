@@ -71,6 +71,7 @@ Experimental Setup:
 
 ```bash
 pip install -r requirements.txt
+```
 
 3) Train the model
 
