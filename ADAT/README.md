@@ -1,237 +1,114 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2867
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
-\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 AppleColorEmoji;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red109\green109\blue109;
-}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c50196\c50196\c50196;
-}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
-{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
-{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww22480\viewh11700\viewkind0
-\deftab720
-\pard\pardeftab720\sa321\partightenfactor0
+# End-to-End-Sign-Language-AI-Translation-System
+Computer Vision, Natural Language Processing, Transformer, Sign Language 
 
-\f0\b\fs48 \cf0 \expnd0\expndtw0\kerning0
-ADAT: \cf2 \cb3 Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation\cf0 \cb1 \
-\pard\pardeftab720\sa298\partightenfactor0
+# ADAT: Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation
 
-\fs40 \cf0 Overview
-\fs36 \
-\pard\pardeftab720\sa240\partightenfactor0
+This repository accompanies the paper:
 
-\f1\b0\fs28 \cf0 This repository provides the official implementation of ADAT, the Adaptive Transformer proposed in our manuscript:\
-\pard\pardeftab720\partightenfactor0
-\cf0 Shahin & Ismail, \'93ADAT: Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation\'94, 2025\
-\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 ADAT is designed to address core challenges in sign language machine translation (SLMT) by efficiently modeling fine-grained short-range motion and long-range temporal dependencies, while substantially reducing computational overhead.\
-ADAT consists of:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-An encoder that integrates convolutional feature extraction, LogSparse Self-Attention, and an adaptive gating mechanism, forming a unified framework for SLMT.\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-A classical Transformer decoder that generates the spoken language sequence\
-\pard\pardeftab720\sa240\partightenfactor0
+> **Nada Shahin, Leila Ismail**  
+> *ADAT: Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation*  
+> **Scientific Reports**, 2026.  
 
-\fs24 \cf0 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \
-\pard\pardeftab720\sa321\partightenfactor0
+## 📬 Contact
 
-\f0\b\fs40 \cf0 Repository Structure\
-\pard\pardeftab720\partightenfactor0
+Prof. Leila Ismail
+Intelligent Distributed Computing and Systems (INDUCE) Lab
+College of Information Technology, United Arab Emirates University
+leila@uaeu.ac.ae
 
-\f2\b0\fs26 \cf0 \
 
-\fs28 ADAT/\
+## 📜 Citation
 
-\f3 \uc0\u9474 
-\f2 \
+If you use this work, please cite:
+Shahin, Nada, and Leila Ismail. 2026. "ADAT: Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation" Scientific Reports. https://doi.org/TBD
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  __init__.py\
+Overview:
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  model_builder.py   # Full ADAT model construction\
+Adaptive Transformer (ADAT) is designed to address core challenges in sign language machine translation (SLMT) by efficiently modeling fine-grained short-range motion and long-range temporal dependencies, while substantially reducing computational overhead.
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  encoder.py         # ADAT encoder\
+ADAT consists of:
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  decoder.py         # Transformer decoder block\
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  layers.py          # LogSparseSelfAttention and PositionalEmbedding\
+System Architecture:
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  data.py            # Synthetic dataset loader + expected real input format\
+Our proposed model, ADAT, is presented in Figure 1. It consists of the following modules:
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  train.py           # Minimal training script (using synthetic data)\
+<img width="1440" height="1040" alt="ADAT Model" src="xxx" />
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  run.py             # Forward-pass demo (sanity check)\
+1. An encoder that integrates convolutional feature extraction, LogSparse Self-Attention, and an adaptive gating mechanism, forming a unified framework for SLMT.
+2. A classical Transformer decoder that generates the spoken language sequence
 
-\f3 \uc0\u9500 \u9472 \u9472 
-\f2  config.yaml        # Model hyperparameters & training configuration\
+  
+## Repository Structure
+ADAT/
+│
+├── __init__.py
+├── model_builder.py   # Full ADAT model construction
+├── encoder.py         # ADAT encoder
+├── decoder.py         # Transformer decoder block
+├── layers.py          # LogSparseSelfAttention and PositionalEmbedding
+├── data.py            # Synthetic dataset loader + expected real input format
+├── train.py           # Minimal training script (using synthetic data)
+├── run.py             # Forward-pass demo (sanity check)
+├── config.yaml        # Model hyperparameters & training configuration
+└── requirements.txt
 
-\f3 \uc0\u9492 \u9472 \u9472 
-\f2  requirements.txt
-\fs26 \
-\pard\pardeftab720\partightenfactor0
 
-\f1\fs24 \cf4 \
-\
-\pard\pardeftab720\sa321\partightenfactor0
+## Demo & Code
 
-\f0\b\fs40 \cf0 Installation
-\fs28 \
-\pard\pardeftab720\sa280\partightenfactor0
+Experimental Setup:
 
-\fs36 \cf0 1. Clone
-\f2\b0 \
-\pard\pardeftab720\partightenfactor0
+### Requirements
+------------
+* tensorflow>=2.10
+* numpy>=1.20
+* pyyaml>=6.0
 
-\fs28 \cf0 git clone https://github.com/induce-lab/ADAT.git\
-cd ADAT\
-\
-\
-\pard\pardeftab720\sa280\partightenfactor0
+### Quick start
+-----------
+1) Clone the repository
 
-\f0\b\fs36 \cf0 2. Install dependencies
-\f2\b0 \
-\pard\pardeftab720\partightenfactor0
+2) Install dependencies
 
-\fs28 \cf0 pip install -r requirements.txt\
-\
-\
-\pard\pardeftab720\sa280\partightenfactor0
+pip install -r requirements.txt
 
-\f0\b\fs36 \cf0 3. Train the model\
-\pard\pardeftab720\sa240\partightenfactor0
+3) Train the model
 
-\f1\b0\fs28 \cf0 By default, trains ADAT end-to-end using randomly generated video/gloss/text sequences:
-\f2 \
-\pard\pardeftab720\partightenfactor0
-\cf0 python train.py --config config.yaml\
-\
-\
-\pard\pardeftab720\sa280\partightenfactor0
+By default, trains ADAT end-to-end using randomly generated video/gloss/text sequences:
+python train.py --config config.yaml
 
-\f0\b\fs36 \cf0 3. Forward-pass
-\f2\b0 \
-\pard\pardeftab720\partightenfactor0
+4) Forward-pass
+   
+python run.py
 
-\fs28 \cf0 python run.py\
-\
-\
-\pard\pardeftab720\sa280\partightenfactor0
+5) Training on real sign language datasets
+   
+To train on real datasets like RWTH-PHOENIX-Weather-2014T,  replace the synthetic loader inside:
+data.py
 
-\f0\b\fs36 \cf0 4. Training on real sign language datasets\
-\pard\pardeftab720\sa240\partightenfactor0
+with the following preprocessed tensors:
+		* video_data: (N, T, 52, 65, 3) or (N, T, feature_dim)
+		* gloss_indices: (N, max_g)  	# Padded integer sequences
+		* text_indices: (N, max_t)  		# Padded integer sequences
 
-\f1\b0\fs28 \cf0 To train on real datasets like 
-\f0\b RWTH-PHOENIX-Weather-2014T
-\f1\b0 ,  replace the synthetic loader inside:
-\f2 \
-\pard\pardeftab720\partightenfactor0
-\cf0 data.py\
-\
-\pard\pardeftab720\sa240\partightenfactor0
+Then simply run:
 
-\f1 \cf0 with the following preprocessed tensors:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls2\ilvl0
-\f2 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-video_data
-\f1 : (N, T, 52, 65, 3) or 
-\f2 (N, T, feature_dim)
-\f1 \
-\ls2\ilvl0
-\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-gloss_indices
-\f1 : (N, max_g)  	# Padded integer sequences\
-\ls2\ilvl0
-\f2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-text_indices
-\f1 : (N, max_t)  		# Padded integer sequences\
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 Then simply run:
-\f2 \
-\pard\pardeftab720\partightenfactor0
-\cf0 python train.py --config config.yaml\
-\
-\pard\pardeftab720\partightenfactor0
+python train.py --config config.yaml
 
-\f1 \cf4 \
-\
-\pard\pardeftab720\sa321\partightenfactor0
+### Reproducibility
+---------
+This codebase provides everything needed to:
+* Build the ADAT architecture
+* Train a minimal working model (with synthetic data)
+* Run forward inference
+* Integrate ADAT into new datasets or pipelines
 
-\f0\b\fs40 \cf0 Reproducibility
-\f1\b0 \
-\pard\pardeftab720\partightenfactor0
+### Configuration notes
+-------------------
+* Confidence gate: CONF_THRESH on edge controls when a translation becomes the displayed caption.
+* Warm-up: MIN_WINDOWS_BEFORE_DISPLAY skips the first windows for stabilization before translating sign language to text.
+* Local inference: toggle with RUN_LOCAL_INFERENCE on edge. If enabled, the edge loads MODEL_PATH and detokenizes with medasl_bpe.model + special_ids.json.
 
-\fs28 \cf4 \
-\pard\pardeftab720\sa240\partightenfactor0
-\cf0 This codebase provides everything needed to:\
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Build the ADAT architecture\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Train a minimal working model (with synthetic data)\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Run forward inference\
-\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
-Integrate ADAT into new datasets or pipelines\
-\pard\tx566\pardeftab720\sa240\partightenfactor0
-\cf4 \
-\pard\pardeftab720\sa321\partightenfactor0
+### 📄 License
 
-\f0\b\fs40 \cf0 Citation
-\fs28 \
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1\b0 \cf0 If you use this implementation, please cite:
-\f2 \
-\pard\pardeftab720\partightenfactor0
-\cf0 @article\{Shahin2026ADAT,\
-  title     = \{ADAT: Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation\},\
-  author    = \{Shahin, Nada and Ismail, Leila\},\
-  journal   = \{Scientific Reports\},\
-  year      = \{2026\}\
-\}\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f1 \cf0 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs40 \cf0 License
-\f1\b0 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
-\ls4\ilvl0
-\fs28 \cf0 \kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-\
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f0\b\fs40 \cf0 Contact\
-\pard\pardeftab720\sa321\partightenfactor0
-
-\f1\b0\fs28 \cf0 \uc0\u8232 For questions or collaborations, please contact:\
-\pard\pardeftab720\sa240\partightenfactor0
-
-\f4 \cf0 \uc0\u55357 \u56551 
-\f1  
-\f0\b leila@uaeu.ac.ae
-\f1\b0 \uc0\u8232 
-\f4 \uc0\u55356 \u57104 
-\f1  {\field{\*\fldinst{HYPERLINK "https://leilafismail.wixsite.com/induce"}}{\fldrslt 
-\f0\b https://leilafismail.wixsite.com/induce}}\
-}
+This project is released under the Creative Commons Attribution (CC BY 4.0) License, consistent with the published article.
