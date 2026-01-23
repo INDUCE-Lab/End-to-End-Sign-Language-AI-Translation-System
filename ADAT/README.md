@@ -31,7 +31,7 @@ System Architecture:
 
 Our proposed model, ADAT, is presented in Figure 1. It consists of the following modules:
 
-<img width="1440" height="1040" alt="ADAT Model" src="xxx" />
+<img width="8370" height="5276" alt="ADAT Architecture" src="https://github.com/user-attachments/assets/a391d171-dfb6-4d69-b3a1-d98b024c2bc2" />
 
 1. An encoder that integrates convolutional feature extraction, LogSparse Self-Attention, and an adaptive gating mechanism, forming a unified framework for SLMT.
 2. A classical Transformer decoder that generates the spoken language sequence
