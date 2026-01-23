@@ -1,5 +1,3 @@
-# End-to-End-Sign-Language-AI-Translation-System
-Computer Vision, Natural Language Processing, Transformer, Sign Language 
 
 # ADAT: Novel Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation
 
@@ -41,6 +39,7 @@ Our proposed model, ADAT, is presented in Figure 1. It consists of the following
   
 ## Repository Structure
 
+<pre>
 ADAT/
 ├── __init__.py
 ├── model_builder.py   # Full ADAT model construction
@@ -52,7 +51,7 @@ ADAT/
 ├── run.py             # Forward-pass demo (sanity check)
 ├── config.yaml        # Model hyperparameters & training configuration
 └── requirements.txt
-
+</pre>
 
 ## Demo & Code
 
