@@ -74,10 +74,13 @@ pip install -r requirements.txt
 3) Train the model
 
 By default, trains ADAT end-to-end using randomly generated video/gloss/text sequences:
+
+```bash
 python train.py --config config.yaml
 
 4) Forward-pass
-   
+
+```bash
 python run.py
 
 5) Training on real sign language datasets
@@ -86,12 +89,13 @@ To train on real datasets like RWTH-PHOENIX-Weather-2014T,  replace the syntheti
 data.py
 
 with the following preprocessed tensors:
-		* video_data: (N, T, 52, 65, 3) or (N, T, feature_dim)
-		* gloss_indices: (N, max_g)  	# Padded integer sequences
-		* text_indices: (N, max_t)  		# Padded integer sequences
+* video_data: (N, T, 52, 65, 3) or (N, T, feature_dim)
+* gloss_indices: (N, max_g)  	# Padded integer sequences
+* text_indices: (N, max_t)  		# Padded integer sequences
 
 Then simply run:
 
+```bash
 python train.py --config config.yaml
 
 ### Reproducibility
