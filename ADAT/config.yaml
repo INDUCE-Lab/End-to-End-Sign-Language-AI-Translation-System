@@ -1,0 +1,32 @@
+'''
+Title:        ADAT
+Description:  ADAT (Adaptive Transformer) Toolkit for Sign Language Machine Translation
+Licence:      GPL - http://www.gnu.org/copyleft/gpl.html
+
+If you are using any ideas, algorithms, packages, codes, datasets, workload, results, and plots, included in ADAT directory please cite
+the following paper:
+
+https://doi.org/TBD">Nada Shahin and Leila Ismail, "ADAT: Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation",
+Scientific Reports 2025
+
+'''
+
+# ADAT configuration
+
+batch_size: 32
+max_video_length: 300    # placeholder; real value comes from dataset
+
+max_gloss_length: 27     # placeholder; real value comes from dataset
+max_text_length: 30      # placeholder; real value comes from dataset
+
+gloss_vocab_size: 835    # placeholder; real value comes from dataset
+text_vocab_size: 914     # placeholder; real value comes from dataset
+
+embed_dim: 1024
+encoder_layers: 12
+decoder_layers: 12
+hidden_units: 16
+
+dropout_rate: 0.0
+learning_rate: 5.0e-5
+epochs: 100
