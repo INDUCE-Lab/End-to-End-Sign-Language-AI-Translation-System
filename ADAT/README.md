@@ -40,8 +40,8 @@ Our proposed model, ADAT, is presented in Figure 1. It consists of the following
 
   
 ## Repository Structure
+
 ADAT/
-│
 ├── __init__.py
 ├── model_builder.py   # Full ADAT model construction
 ├── encoder.py         # ADAT encoder
