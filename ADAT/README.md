@@ -69,6 +69,7 @@ Experimental Setup:
 
 2) Install dependencies
 
+```bash
 pip install -r requirements.txt
 
 3) Train the model
@@ -77,11 +78,13 @@ By default, trains ADAT end-to-end using randomly generated video/gloss/text seq
 
 ```bash
 python train.py --config config.yaml
+```
 
 4) Forward-pass
 
 ```bash
 python run.py
+```
 
 5) Training on real sign language datasets
    
@@ -97,6 +100,7 @@ Then simply run:
 
 ```bash
 python train.py --config config.yaml
+```
 
 ### Reproducibility
 ---------
