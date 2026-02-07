@@ -129,37 +129,81 @@ Experimental Setup:
 
 ### Requirements
 ------------
-* Python 3.10
 * Edge: opencv-python, mediapipe, numpy, torch, requests, sentencepiece
-* Cloud: flask, numpy
+* Cloud: tensorflow, flask, numpy, pyyaml
 
 ### Quick start
 -----------
-1) Prepare the cloud service
+1) Clone the repository
+```bash
+git clone https://github.com/INDUCE-Lab/End-to-End-Sign-Language-AI-Translation-System.git
+cd End-to-End-Sign-Language-AI-Translation-System
+```
+
+2) Train the translation model
+	1. Navigate to one of the translation models (Transformer/ or ADAT/)
+		```bash
+		cd Transformer
+  		# or
+  		cd ADAT
+		```
+
+ 	2. Install dependencies
+		```bash
+		pip install -r requirements.txt
+		```
+  
+	3. Train the model
+		By default, trains the model end-to-end using randomly generated video/gloss/text sequences:
+		```bash
+		python train.py --config config.yaml
+		```
+  
+	4. Forward pass
+		```bash
+		python run.py
+		```
+  
+	5. Training on real sign language datasets
+		To train on real datasets like PHOENIX14T and ISL-CSLTR, replace the synthetic loader inside:
+		data.py with the following preprocessed tensors:
+		* video_data: (N, T, 52, 65, 3) or (N, T, feature_dim)
+		* gloss_indices: (N, max_g)  	# Padded integer sequences
+		* text_indices: (N, max_t)  		# Padded integer sequences
+		Then simply run:
+		```bash
+		python train.py --config config.yaml
+		```
+  
+3) Prepare the cloud service
 	1. Install the files under the model directory
 		* transformer.pth: best Transformer model checkpoint
 		* special_ids.json: token IDs and sizes
 		* medasl_bpe.model: SentencePiece-BPE model for text decoding
 
 	2. Install cloud dependencies and run:
+		```bash
 		pip install -r Cloud_requirements.txt
 		# run server
 		python -m Cloud
 		# or
 		python Cloud/.py
+  		```
 
-2) Configure the edge client
+4) Configure the edge client
 	1. Open Edge.py and set:
 		* CLOUD_UPLOAD_URL = "http://<CLOUD_HOST>:<PORT>/upload_keypoints"
 		* CLOUD_MODEL_URL = "http://<CLOUD_HOST>:<PORT>/get_model"
 		* Adjust SEQ_LEN, MAX_SAMPLES, and paths if needed.
 
 	2. Install edge dependencies and run:
+		```bash
 		pip install -r Edge_requirements.txt
 		# run edge
 		python -m edge
 		# or
 		python edge.py
+  		```
 
 	3. Controls:
 		* When running the edge Python script, a window will pop up showing landmarks and a caption ("translating.." appears until translation confidence/threshold is met).
@@ -186,9 +230,18 @@ Experimental Setup:
 ----------
 * Set the edge CLOUD_* URLs to the cloud host/IP and open the cloud port in the firewall.
 * Run edge from the repo root:
+```bash
 python -m edge
+# or
+python edge.py
+```
+
 * Run cloud similarly:
+```bash
 python -m cloud
+# or
+python cloud.py
+```
 
 ### 📄 License
 
