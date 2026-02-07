@@ -15,18 +15,18 @@ import yaml
 import numpy as np
 import tensorflow as tf
 
-from model_builder import create_adat
+from model_builder import create_transformer
 
 class Config:
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
 
 def main():
-    with open("adat/config.yaml", "r") as f:
+    with open("Transformer/config.yaml", "r") as f:
         cfg_dict = yaml.safe_load(f)
     config = Config(**cfg_dict)
 
-    model = create_adat(
+    model = create_transformer(
         config,
         gloss_vocab_size=config.gloss_vocab_size,
         text_vocab_size=config.text_vocab_size,

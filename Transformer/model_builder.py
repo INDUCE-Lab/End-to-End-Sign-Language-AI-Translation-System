@@ -14,15 +14,15 @@ Mathematics 2025
 
 import tensorflow as tf
 
-from encoder import build_adat_encoder
+from encoder import build_transformer_encoder
 from decoder import TransformerDecoder
 from layers import PositionalEmbedding
 
 
 
-def create_adat(config):
+def create_transformer(config):
     """
-    Build a sign-to-gloss-to-text model using ADAT encoder.
+    Build a sign-to-gloss-to-text model using the Transformer encoder.
     Config is expected to have:
         max_video_length, embed_dim, encoder_layers, decoder_layers,
         hidden_units, num_heads, max_gloss_length, max_text_length
@@ -48,14 +48,14 @@ def create_adat(config):
             tf.keras.layers.Dense(config.embed_dim, activation='relu')
         )(x) # (batch, T, embed_dim)
 
-        adat_encoder = build_adat_encoder(
+        encoder = build_transformer_encoder(
             num_layers=config.encoder_layers,
             embed_dim=config.embed_dim,
             num_heads=config.num_heads,
             ff_dim=config.hidden_units,
             dropout_rate=getattr(config, "dropout_rate", 0.0),
         )
-        encoder_outputs = adat_encoder(x)
+        encoder_outputs = encoder(x)
 
         # Gloss head
         pooled = tf.keras.layers.GlobalAveragePooling1D()(encoder_outputs)
@@ -104,6 +104,6 @@ def create_adat(config):
         transformer = tf.keras.Model(
             [encoder_inputs, decoder_inputs_text],
             [gloss_output, text_output],
-            name="adat")
+            name="Transformer")
 
     return transformer

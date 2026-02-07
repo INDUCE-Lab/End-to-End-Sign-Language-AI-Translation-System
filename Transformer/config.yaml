@@ -9,9 +9,7 @@
 # A Privacy-Preserving Edge–Cloud–Blockchain Approach", Mathematics 2025
 # https://doi.org/10.3390/math13233759
 
-
-# ADAT configuration
-
+# Transformer configuration
 batch_size: 32
 max_video_length: 300    # placeholder; real value comes from dataset
 
@@ -29,4 +27,4 @@ num_heads: 8
 
 dropout_rate: 0.1
 learning_rate: 5.0e-5
-epochs: 100
+epochs: 30

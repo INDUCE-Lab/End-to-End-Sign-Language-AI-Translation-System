@@ -1,13 +1,14 @@
 '''
-Title:        ADAT
-Description:  ADAT (Adaptive Transformer) Toolkit for Sign Language Machine Translation
-Licence:      GPL - http://www.gnu.org/copyleft/gpl.html
+Title:        End-to-End-Sign-Language-AI-Translation-System
+Description:  End-to-end system for sign language translation using AI models across Edge and Cloud.
+Licence:      GNU GENERAL PUBLIC LICENSE
 
-If you are using any ideas, algorithms, packages, codes, datasets, workload, results, and plots, included in ADAT directory please cite
+If you are using any ideas, algorithms, packages, codes, datasets, workload, results, and plots included in this project, please cite
 the following paper:
 
-https://doi.org/TBD">Nada Shahin and Leila Ismail, "ADAT: Time-Series-Aware Adaptive Transformer Architecture for Sign Language Translation",
-Scientific Reports 2026
+https://doi.org/10.3390/math13233759">Nada Shahin and Leila Ismail, "Towards Trustworthy Sign Language Translation System: 
+A Privacy-Preserving Edge–Cloud–Blockchain Approach",
+Mathematics 2025
 
 '''
 
